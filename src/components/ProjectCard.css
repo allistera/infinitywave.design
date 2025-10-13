@@ -1,0 +1,50 @@
+.project-card {
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+}
+
+.project-card-image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background-color: var(--color-hover);
+  margin-bottom: var(--spacing-sm);
+}
+
+.project-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-card-image img {
+  transform: scale(1.05);
+}
+
+.project-card-content {
+  padding: var(--spacing-xs) 0;
+}
+
+.project-card-title {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: var(--spacing-xs);
+  line-height: 1.3;
+}
+
+.project-card-meta {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.project-card-description {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
