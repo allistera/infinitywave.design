@@ -1,16 +1,116 @@
-# React + Vite
+# Infinity Wave Design
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, elegant portfolio website for Infinity Wave Design, a Scottish architecture, structural engineering, and project management firm.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Full-height hero slideshow showcasing featured projects
+- Responsive project gallery with filtering by type
+- Individual project detail pages
+- About page detailing company history and services
+- Contact form for inquiries
+- Glass morphism header with transparent backdrop effect
+- Mobile-responsive design
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19
+- Vite
+- React Router DOM
+- CSS3 with custom properties
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- Node.js (v18 or higher)
+- npm
+
+### Installation
+
+```bash
+npm install
+```
+
+### Development
+
+Run the development server:
+
+```bash
+npm run dev
+```
+
+The app will be available at `http://localhost:5173`
+
+To run on a specific port (e.g., 5174):
+
+```bash
+npm run dev -- --port 5174
+```
+
+### Build
+
+Create a production build:
+
+```bash
+npm run build
+```
+
+### Preview
+
+Preview the production build locally:
+
+```bash
+npm run preview
+```
+
+## Deployment
+
+This project is configured for deployment on Vercel.
+
+### Deploy with Vercel
+
+**Option 1: Via Vercel Dashboard**
+1. Visit [vercel.com](https://vercel.com)
+2. Import your Git repository
+3. Vercel will auto-detect the Vite configuration
+4. Click Deploy
+
+**Option 2: Via Vercel CLI**
+```bash
+npm install -g vercel
+vercel login
+vercel
+```
+
+## Project Structure
+
+```
+src/
+├── components/     # Reusable components (Header, Footer, FilterBar, etc.)
+├── pages/         # Page components (ProjectsPage, AboutPage, ContactPage)
+├── data/          # Project data
+├── App.jsx        # Main app component with routing
+└── main.jsx       # Application entry point
+```
+
+## Features Detail
+
+### Hero Slideshow
+- Automatically cycles through 3 featured projects
+- 5-second intervals with smooth fade transitions
+- Manual navigation via indicator dots
+- Full viewport height with overlay gradient
+
+### Project Filtering
+- Filter projects by type (Residential, Commercial, Interior Design)
+- Dynamic filtering without page reload
+
+### Glass Morphism Header
+- Transparent backdrop with blur effect
+- Fixed positioning for consistent navigation
+- Responsive design for mobile devices
+
+## License
+
+This project is private and proprietary.
