@@ -1,8 +1,16 @@
 import { useState } from 'react';
+import { useSEO } from '../hooks/useSEO';
 import './ContactPage.css';
 
 export default function ContactPage() {
   const [status, setStatus] = useState('');
+
+  useSEO({
+    title: 'Contact Us | Infinity Wave Design',
+    description: 'Get in touch with Infinity Wave Design for your architecture, structural engineering, or project management needs in Scotland. We serve Edinburgh, Glasgow, and beyond.',
+    keywords: 'contact Infinity Wave Design, architecture inquiry Scotland, Edinburgh architects contact, Scottish engineering firm',
+    canonicalUrl: 'https://infinitywave.design/contact'
+  });
 
   const handleSubmit = async (e) => {
     e.preventDefault();

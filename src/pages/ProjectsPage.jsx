@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useSEO } from '../hooks/useSEO';
 import { projects } from '../data/projects';
 import ProjectCard from '../components/ProjectCard';
 import FilterBar from '../components/FilterBar';
@@ -7,6 +8,13 @@ import './ProjectsPage.css';
 export default function ProjectsPage() {
   const [selectedTypeFilter, setSelectedTypeFilter] = useState('all');
   const [currentSlide, setCurrentSlide] = useState(0);
+
+  useSEO({
+    title: 'Infinity Wave Design | Architecture, Engineering & Project Management Scotland',
+    description: 'Scottish architecture, structural engineering, and project management firm. Delivering sustainable, innovative designs for residential and commercial projects across Edinburgh, Glasgow, and Scotland.',
+    keywords: 'architecture Scotland, structural engineering Edinburgh, project management Glasgow, Scottish architects, sustainable design, residential architecture, commercial architecture, interior design',
+    canonicalUrl: 'https://infinitywave.design'
+  });
 
   const featuredProjects = projects.filter(project => project.featured).slice(0, 3);
   const filteredProjects = projects.filter(project => {

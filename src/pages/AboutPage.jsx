@@ -1,6 +1,14 @@
+import { useSEO } from '../hooks/useSEO';
 import './AboutPage.css';
 
 export default function AboutPage() {
+  useSEO({
+    title: 'About Us | Infinity Wave Design',
+    description: 'Learn about Infinity Wave Design, a Scottish architecture, structural engineering, and project management firm based in Edinburgh. Founded in 2015, we deliver sustainable, innovative designs.',
+    keywords: 'about Infinity Wave Design, Scottish architecture firm, Edinburgh architects, sustainable design Scotland',
+    canonicalUrl: 'https://infinitywave.design/about'
+  });
+
   return (
     <div className="about-page">
       <div className="about-header">
