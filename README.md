@@ -32,20 +32,6 @@ A modern, elegant portfolio website for Infinity Wave Design, a Scottish archite
 npm install
 ```
 
-### Environment Variables
-
-Create a `.env` file in the root directory:
-
-```bash
-cp .env.example .env
-```
-
-Add your Sentry DSN (get it from [sentry.io](https://sentry.io)):
-
-```
-VITE_SENTRY_DSN=your_sentry_dsn_here
-```
-
 ### Development
 
 Run the development server:
@@ -87,13 +73,8 @@ This project is configured for deployment on Vercel.
 **Option 1: Via Vercel Dashboard**
 1. Visit [vercel.com](https://vercel.com)
 2. Import your Git repository
-3. Add environment variables in Project Settings:
-   - `VITE_SENTRY_DSN`
-   - `SENTRY_PROJECT`
-   - `SENTRY_AUTH_TOKEN`
-   - `SENTRY_ORG`
-4. Vercel will auto-detect the Vite configuration
-5. Click Deploy
+3. Vercel will auto-detect the Vite configuration
+4. Click Deploy
 
 **Option 2: Via Vercel CLI**
 ```bash
