@@ -2,24 +2,31 @@ import { useState } from 'react';
 import './ContactPage.css';
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    message: ''
-  });
+  const [status, setStatus] = useState('');
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    setFormData({ fullName: '', email: '', message: '' });
+    const form = e.target;
+    const data = new FormData(form);
+
+    try {
+      const response = await fetch('https://formspree.io/f/xyznbqdj', {
+        method: 'POST',
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        setStatus('success');
+        form.reset();
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      setStatus('error');
+    }
   };
 
   return (
@@ -39,8 +46,6 @@ export default function ContactPage() {
               type="text"
               id="fullName"
               name="fullName"
-              value={formData.fullName}
-              onChange={handleChange}
               className="form-input"
               required
             />
@@ -52,8 +57,6 @@ export default function ContactPage() {
               type="email"
               id="email"
               name="email"
-              value={formData.email}
-              onChange={handleChange}
               className="form-input"
               required
             />
@@ -64,13 +67,18 @@ export default function ContactPage() {
             <textarea
               id="message"
               name="message"
-              value={formData.message}
-              onChange={handleChange}
               className="form-textarea"
               rows="6"
               required
             />
           </div>
+
+          {status === 'success' && (
+            <p className="form-status success">Thank you! Your message has been sent.</p>
+          )}
+          {status === 'error' && (
+            <p className="form-status error">Oops! There was a problem sending your message.</p>
+          )}
 
           <button type="submit" className="submit-button">
             Send Message
