@@ -3,7 +3,7 @@ import './ProjectCard.css';
 
 export default function ProjectCard({ project }) {
   return (
-    <Link to={`/projects/${project.id}`} className="project-card">
+    <Link to={`/projects/${project.slug}`} className="project-card">
       <div className="project-card-image">
         <img src={project.thumbnail} alt={project.title} />
       </div>

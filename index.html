@@ -29,6 +29,60 @@
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://infinitywave.design" />
 
+    <!-- LocalBusiness + Organization Schema -->
+    <!-- TODO: Update address, telephone, foundingDate, and sameAs URLs with verified details -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": ["Organization", "LocalBusiness"],
+          "@id": "https://infinitywave.design/#organization",
+          "name": "Infinity Wave Design",
+          "url": "https://infinitywave.design",
+          "logo": "https://infinitywave.design/vite.svg",
+          "foundingDate": "2015",
+          "description": "Scottish architecture, structural engineering, and project management firm delivering sustainable, innovative designs for residential and commercial projects across Edinburgh, Glasgow, and Scotland.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "24 Charlotte Square",
+            "addressLocality": "Edinburgh",
+            "postalCode": "EH2 4ET",
+            "addressRegion": "Scotland",
+            "addressCountry": "GB"
+          },
+          "telephone": "+441312345678",
+          "email": "hello@infinitywave.design",
+          "openingHours": "Mo-Fr 09:00-17:30",
+          "areaServed": [
+            { "@type": "City", "name": "Edinburgh" },
+            { "@type": "City", "name": "Glasgow" },
+            { "@type": "AdministrativeArea", "name": "Scotland" }
+          ],
+          "knowsAbout": [
+            "Architecture",
+            "Structural Engineering",
+            "Project Management",
+            "Interior Design",
+            "Sustainable Design",
+            "Heritage Conservation"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Design Services",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Architecture" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Structural Engineering" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Project Management" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Interior Design" } }
+            ]
+          },
+          "sameAs": []
+        }
+      ]
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">

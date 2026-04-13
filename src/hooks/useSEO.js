@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-export function useSEO({ title, description, keywords, canonicalUrl }) {
+export function useSEO({ title, description, keywords, canonicalUrl, noindex = false }) {
   useEffect(() => {
     if (title) {
       document.title = title;
@@ -40,5 +40,10 @@ export function useSEO({ title, description, keywords, canonicalUrl }) {
     if (canonical && canonicalUrl) {
       canonical.setAttribute('href', canonicalUrl);
     }
-  }, [title, description, keywords, canonicalUrl]);
+
+    const metaRobots = document.querySelector('meta[name="robots"]');
+    if (metaRobots) {
+      metaRobots.setAttribute('content', noindex ? 'noindex, nofollow' : 'index, follow');
+    }
+  }, [title, description, keywords, canonicalUrl, noindex]);
 }

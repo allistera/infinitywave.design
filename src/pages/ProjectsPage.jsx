@@ -42,7 +42,7 @@ export default function ProjectsPage() {
             >
               <div className="hero-overlay">
                 <div className="hero-content">
-                  <h1 className="hero-title">{project.title}</h1>
+                  <h2 className="hero-title">{project.title}</h2>
                   <p className="hero-location">{project.location}</p>
                 </div>
               </div>

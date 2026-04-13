@@ -32,7 +32,7 @@ export default function ContactPage() {
       } else {
         setStatus('error');
       }
-    } catch (error) {
+    } catch {
       setStatus('error');
     }
   };
@@ -46,7 +46,28 @@ export default function ContactPage() {
         </p>
       </div>
 
-      <div className="contact-content">
+      <div className="contact-layout">
+        <div className="contact-info">
+          <h2 className="contact-info-heading">Our Office</h2>
+          <address className="contact-nap">
+            <p className="contact-nap-name">Infinity Wave Design</p>
+            <p>
+              {/* TODO: Replace with your actual office address */}
+              24 Charlotte Square<br />
+              Edinburgh<br />
+              EH2 4ET<br />
+              Scotland, UK
+            </p>
+            <p>
+              <a href="tel:+441312345678">+44 (0)131 234 5678</a>
+            </p>
+            <p>
+              <a href="mailto:hello@infinitywave.design">hello@infinitywave.design</a>
+            </p>
+          </address>
+          <p className="contact-hours">Monday – Friday, 9am – 5:30pm</p>
+        </div>
+
         <form className="contact-form" onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="fullName" className="form-label">Full Name</label>
