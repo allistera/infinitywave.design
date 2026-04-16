@@ -68,6 +68,40 @@ export default function ProjectsPage() {
         </p>
       </div>
 
+      <div className="intro-section">
+        <div className="intro-text">
+          <p>
+            Infinity Wave Design is a Scottish multidisciplinary practice offering architecture, structural
+            engineering, interior design, and project management from a single integrated team. Founded in
+            Edinburgh, we work with clients across Scotland — from the Highlands to the Central Belt — on
+            projects that range from bespoke private homes to large-scale commercial developments.
+          </p>
+          <p>
+            What sets Infinity Wave Design apart is the depth of expertise we bring under one roof. Rather
+            than coordinating between separate consultants, our clients benefit from architects, engineers,
+            and project managers who collaborate from day one. This integrated model means fewer surprises,
+            stronger designs, and smoother delivery — from planning application through to practical completion.
+          </p>
+          <p>
+            We believe that the best buildings are the result of listening carefully, thinking rigorously,
+            and designing with purpose. Every project we take on — whether a sensitive heritage restoration,
+            a contemporary new-build home, or a mixed-use urban development — receives the same focused
+            attention. We don't impose a house style; instead, we respond to the specifics of each site,
+            client, and brief to produce work that is genuinely contextual and built to last.
+          </p>
+          <p>
+            Sustainability is central to how Infinity Wave Design operates. We design for longevity,
+            specify materials with low embodied carbon, and integrate passive environmental strategies
+            wherever possible. Our projects consistently meet and exceed current building performance
+            standards, and we are committed to reducing the carbon footprint of every building we create.
+          </p>
+          <p>
+            If you are looking for an architecture and engineering practice in Scotland that can take your
+            project from initial concept to completed building, we would love to hear from you.
+          </p>
+        </div>
+      </div>
+
       <div className="services-section">
         <div className="service">
           <h3>Architecture</h3>
