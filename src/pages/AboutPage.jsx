@@ -13,10 +13,33 @@ export default function AboutPage() {
     <div className="about-page">
       <div className="about-header">
         <h1 className="page-title">About Us</h1>
+        <p className="about-lead">
+          A multidisciplinary studio based in Edinburgh, delivering architecture, engineering,
+          and project management across Scotland since 2015.
+        </p>
+      </div>
+
+      <div className="about-stats">
+        <div className="stat">
+          <span className="stat-number">2015</span>
+          <span className="stat-label">Founded</span>
+        </div>
+        <div className="stat">
+          <span className="stat-number">18+</span>
+          <span className="stat-label">Team Members</span>
+        </div>
+        <div className="stat">
+          <span className="stat-number">4</span>
+          <span className="stat-label">Disciplines</span>
+        </div>
+        <div className="stat">
+          <span className="stat-number">100+</span>
+          <span className="stat-label">Projects Delivered</span>
+        </div>
       </div>
 
       <div className="about-content">
-        <div className="about-section">
+        <div className="about-section about-section--highlight">
           <h2>Our Story</h2>
           <p>
             Founded in 2015 in Edinburgh, Infinity Wave Design emerged from a shared vision between three
@@ -48,64 +71,28 @@ export default function AboutPage() {
           </p>
         </div>
 
-        <div className="about-section">
-          <h2>Residential Work</h2>
-          <p>
-            Our residential practice ranges from bespoke new-build homes to sensitive renovations of historic
-            properties. We work closely with clients to create homes that respond to their lifestyles while
-            respecting their surroundings. Whether designing a contemporary family home with views across
-            Loch Lomond or transforming a Georgian townhouse in Edinburgh's New Town, we prioritise natural
-            light, material quality, and spaces that adapt to changing needs over time.
-          </p>
-          <p>
-            We're particularly experienced in navigating Scotland's planning and conservation regulations,
-            helping clients realise ambitious projects within sensitive contexts. Our technical expertise
-            in building performance ensures our homes are not only beautiful but comfortable, efficient,
-            and built to last.
-          </p>
-        </div>
-
-        <div className="about-section">
-          <h2>Commercial Development</h2>
-          <p>
-            In the commercial sector, we've delivered projects ranging from boutique hotels and office spaces
-            to mixed-use urban developments. We understand that commercial buildings must perform financially
-            while creating environments that attract and retain occupants. Our designs balance operational
-            efficiency with architectural quality, creating spaces that enhance brand identity and user wellbeing.
-          </p>
-          <p>
-            We specialise in adaptive reuse, breathing new life into underutilised industrial and heritage
-            buildings. Our structural engineering capabilities allow us to push boundaries, creating dramatic
-            interventions within existing fabric while ensuring safety and longevity. These projects exemplify
-            our belief that sustainable development means working with what exists rather than starting from scratch.
-          </p>
-        </div>
-
-        <div className="about-section">
-          <h2>Sustainability</h2>
-          <p>
-            Environmental responsibility is woven into every decision we make. We design buildings that minimise
-            energy consumption through passive strategies, specify materials with low embodied carbon, and create
-            resilient structures that will serve multiple generations. Our projects consistently achieve high
-            sustainability ratings, but beyond certifications, we're committed to creating buildings that tread
-            lightly on the planet while enriching the lives of those who use them.
-          </p>
-        </div>
-
-        <div className="about-section">
-          <h2>Our Team</h2>
-          <p>
-            Today, our studio comprises 18 architects, engineers, and project managers working from our Edinburgh
-            office. We're a tight-knit group united by intellectual curiosity and a commitment to craft. Our team
-            brings diverse experience from practices across Europe, yet we remain rooted in Scotland, drawing
-            inspiration from its landscapes, light, and architectural heritage.
-          </p>
-          <p>
-            We believe in long-term relationships with our clients, consultants, and contractors. Many of our
-            projects come through referrals from past clients, a testament to the collaborative, transparent
-            approach we bring to every commission. We're not interested in imposing a signature style; instead,
-            we listen carefully, think deeply, and design thoughtfully.
-          </p>
+        <div className="about-disciplines">
+          <div className="discipline-card">
+            <h3>Residential</h3>
+            <p>
+              Bespoke new-build homes to sensitive renovations of historic properties. We prioritise
+              natural light, material quality, and spaces that adapt to changing needs over time.
+            </p>
+          </div>
+          <div className="discipline-card">
+            <h3>Commercial</h3>
+            <p>
+              Boutique hotels, office spaces, and mixed-use urban developments that balance
+              operational efficiency with architectural quality and user wellbeing.
+            </p>
+          </div>
+          <div className="discipline-card">
+            <h3>Heritage</h3>
+            <p>
+              Adaptive reuse and conservation projects that breathe new life into industrial
+              and heritage buildings while preserving their historic character.
+            </p>
+          </div>
         </div>
       </div>
     </div>
