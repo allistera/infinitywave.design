@@ -10,7 +10,7 @@ export default function ProjectsPage() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useSEO({
-    title: 'Infinity Wave Design | Architecture, Engineering & Project Management Scotland',
+    title: 'Infinity Wave Design | Architecture & Engineering Scotland',
     description: 'Scottish architecture, structural engineering, and project management firm. Delivering sustainable, innovative designs for residential and commercial projects across Edinburgh, Glasgow, and Scotland.',
     keywords: 'architecture Scotland, structural engineering Edinburgh, project management Glasgow, Scottish architects, sustainable design, residential architecture, commercial architecture, interior design',
     canonicalUrl: 'https://infinitywave.design'
